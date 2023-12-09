@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.0 (wsit240-7e98ff4; 2017-08-03T21:19:54+0200) JAXWS-RI/2.3.0 JAXWS-API/2.3.0 JAXB-RI/2.3.0 JAXB-API/2.3.0 svn-revision#unknown. --><xs:schema xmlns:tns="http://ejb/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://ejb/">
+
+<xs:element name="createVino" type="tns:createVino"/>
+
+<xs:element name="createVinoResponse" type="tns:createVinoResponse"/>
+
+<xs:element name="deleteVino" type="tns:deleteVino"/>
+
+<xs:element name="deleteVinoResponse" type="tns:deleteVinoResponse"/>
+
+<xs:element name="findAll" type="tns:findAll"/>
+
+<xs:element name="findAllResponse" type="tns:findAllResponse"/>
+
+<xs:element name="findById" type="tns:findById"/>
+
+<xs:element name="findByIdResponse" type="tns:findByIdResponse"/>
+
+<xs:element name="findByPrezzo" type="tns:findByPrezzo"/>
+
+<xs:element name="findByPrezzoInf" type="tns:findByPrezzoInf"/>
+
+<xs:element name="findByPrezzoInfResponse" type="tns:findByPrezzoInfResponse"/>
+
+<xs:element name="findByPrezzoResponse" type="tns:findByPrezzoResponse"/>
+
+<xs:element name="findByProvenienza" type="tns:findByProvenienza"/>
+
+<xs:element name="findByProvenienzaResponse" type="tns:findByProvenienzaResponse"/>
+
+<xs:element name="findByVitigno" type="tns:findByVitigno"/>
+
+<xs:element name="findByVitignoResponse" type="tns:findByVitignoResponse"/>
+
+<xs:element name="updateVino" type="tns:updateVino"/>
+
+<xs:element name="updateVinoResponse" type="tns:updateVinoResponse"/>
+
+<xs:complexType name="findByPrezzoInf">
+<xs:sequence>
+<xs:element name="arg0" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByPrezzoInfResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:vino" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="vino">
+<xs:sequence>
+<xs:element name="acquisto" type="xs:string" minOccurs="0"/>
+<xs:element name="azienda" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="nominativo" type="xs:string" minOccurs="0"/>
+<xs:element name="numBottiglieDisponibili" type="xs:int"/>
+<xs:element name="prezzo" type="xs:float"/>
+<xs:element name="provenienza" type="xs:string" minOccurs="0"/>
+<xs:element name="tipologia" type="xs:string" minOccurs="0"/>
+<xs:element name="vitigno" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAll">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findAllResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:vino" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createVino">
+<xs:sequence>
+<xs:element name="arg0" type="tns:vino" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createVinoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:vino" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateVino">
+<xs:sequence>
+<xs:element name="arg0" type="tns:vino" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateVinoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:vino" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteVino">
+<xs:sequence>
+<xs:element name="arg0" type="tns:vino" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteVinoResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findByVitigno">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByVitignoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:vino" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByProvenienza">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByProvenienzaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:vino" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findById">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByIdResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:vino" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByPrezzo">
+<xs:sequence>
+<xs:element name="arg0" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findByPrezzoResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:vino" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
